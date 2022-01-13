@@ -1,2 +1,3 @@
-# CSTP2104
-Windows interactive and design course
+# CSTP2104: Window interactive and design
+
+## 🚀 Week I: Review OOP
