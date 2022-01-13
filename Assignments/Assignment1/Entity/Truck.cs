@@ -5,8 +5,8 @@ namespace Assignment1.Entity
     public class Truck: Car, IPrint
     {
         TruckType _type;
-        public Truck(string model, string brand, int year, int price, Engines e, TruckType type)
-            :base(model,brand,year,price, e)
+        public Truck(string model, string brand, int year, int price, int me, Engines e, TruckType type)
+            :base(model,brand,year,price, me, e)
         {
             this._type = type;
         }

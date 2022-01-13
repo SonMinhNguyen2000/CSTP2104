@@ -6,8 +6,9 @@ namespace Assignment1.Entity
     {
         MotorcycleType _type;
 
-        public Motorcycle(string model, string brand, int year, int price, Engines e,MotorcycleType type):
-            base(model, brand, year, price, e)
+        public Motorcycle(string model, string brand, int year, int price, int mileage, Engines e,
+            MotorcycleType type) :
+            base(model, brand, year, price, mileage, e)
         {
             this._type = type;
             this.setVehicleType(VehicleType.TwoWheel);

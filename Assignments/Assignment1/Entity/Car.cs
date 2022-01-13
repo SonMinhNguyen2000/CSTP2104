@@ -9,7 +9,7 @@ namespace Assignment1.Entity
 {
     public class Car : Vehicle
     {
-        public Car(string m, string b, int y, int p, Engines e):base(m, b, y, p, e)
+        public Car(string m, string b, int y, int p, int me ,Engines e):base(m, b, y, p, me,e)
         {
             this.setVehicleType(VehicleType.FourWheel);
         }

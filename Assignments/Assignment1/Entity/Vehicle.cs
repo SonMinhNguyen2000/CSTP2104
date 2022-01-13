@@ -12,12 +12,14 @@ namespace Assignment1.Entity
         int _year;
         int _price;
         Engines _engine;
-        public Vehicle(string b, string m, int y, int p, Engines e)
+        int _mileage;
+        public Vehicle(string b, string m, int y, int p, int me, Engines e)
         {
             this._brand = b;
             this._year = y;
             this._model = m;
             this._price = p;
+            this._mileage = me;
             this._engine = e;
         }
         public string getType()
@@ -69,16 +71,37 @@ namespace Assignment1.Entity
             }
             return "";
         }
+        
+        public int getMileage()
+        {
+            return _mileage;
+        }
+
+        public void setMileage(int me)
+        {
+            _mileage = me;
+        }
+        
+        //return vehicle info as a string
         public override string ToString()
         {
             return String.Format("Model:{0}\n" +
                 "Brand:{1}\n" +
                 "Engine:{5}\n" +
+                "Mileage: {6} km\n" +
                 "Year:{2}\n" +
                 "Price:{3} $\n" +
                 "Vehicle type:{4}\n", 
                 this.getModel(), this.getBrand(), this.getYear().ToString(), 
-                this.getPrice().ToString(), this.getType(), this.getEngine());
+                this.getPrice().ToString(), this.getType(), this.getEngine(), this.getMileage());
+        }
+
+        //convert mileage from km to mile
+        //mileage is km by default
+        public int mileageConverter()
+        {
+            int mile = (int) (_mileage * 0.621371);
+            return mile;
         }
     }
 }
