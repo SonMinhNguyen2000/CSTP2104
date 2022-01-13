@@ -8,9 +8,9 @@ namespace Assignment1.Enum
 {
     public enum TruckType
     {
-        pickup, 
-        ambulance,
-        car_transporter,
-        fire_truck
+        Pickup, 
+        Ambulance,
+        CarTransporter,
+        FireTruck
     }
 }

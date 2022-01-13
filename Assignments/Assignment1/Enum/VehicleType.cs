@@ -8,7 +8,7 @@ namespace Assignment1.Enum
 {
     public enum VehicleType
     {
-        four_wheel,
-        two_wheel
+        FourWheel,
+        TwoWheel
     }
 }

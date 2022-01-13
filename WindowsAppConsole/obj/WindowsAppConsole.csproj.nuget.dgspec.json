@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\sonmi\\source\\repos\\WindowsAppConsole\\WindowsAppConsole.csproj": {}
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj": {}
   },
   "projects": {
-    "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\WindowsAppLib.csproj": {
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\WindowsAppLib.csproj",
+        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
         "projectName": "WindowsAppLib",
-        "projectPath": "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\WindowsAppLib.csproj",
+        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
         "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\obj\\",
+        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "D:\\Users\\sonmi\\source\\repos\\WindowsAppConsole\\WindowsAppConsole.csproj": {
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\sonmi\\source\\repos\\WindowsAppConsole\\WindowsAppConsole.csproj",
+        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
         "projectName": "WindowsAppConsole",
-        "projectPath": "D:\\Users\\sonmi\\source\\repos\\WindowsAppConsole\\WindowsAppConsole.csproj",
+        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
         "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\sonmi\\source\\repos\\WindowsAppConsole\\obj\\",
+        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\WindowsAppLib.csproj": {
-                "projectPath": "D:\\Users\\sonmi\\source\\repos\\CSTP2104\\WindowsAppLib.csproj"
+              "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj": {
+                "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj"
               }
             }
           }

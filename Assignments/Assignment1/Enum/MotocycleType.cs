@@ -1,9 +1,9 @@
 ﻿namespace Assignment1.Enum
 {
-    public enum MotocycleType
+    public enum MotorcycleType
     {
-        cruiser,
-        sport, 
-        touring
+        Cruiser,
+        Sport, 
+        Touring
     }
 }

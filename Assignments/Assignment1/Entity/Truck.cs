@@ -1,39 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assignment1.Enum;
+﻿using Assignment1.Enum;
 using Assignment1.Interface;
 namespace Assignment1.Entity
 {
     public class Truck: Car, IPrint
     {
-        TruckType type;
-        public Truck(string model, string brand, int year, int price, TruckType type):base(model,brand,year,price)
+        TruckType _type;
+        public Truck(string model, string brand, int year, int price, Engines e, TruckType type)
+            :base(model,brand,year,price, e)
         {
-            this.type = type;
+            this._type = type;
         }
 
-        public void setType(TruckType t) { this.type = t;}
-        public string getType()
+        public void setType(TruckType t) { this._type = t;}
+        public new string getType()
         {
-            switch(this.type)
+            switch(this._type)
             {
-                case TruckType.ambulance:
+                case TruckType.Ambulance:
                     return "Ambulance";
-                case TruckType.fire_truck:
+                case TruckType.FireTruck:
                     return "fire truck";
-                case TruckType.car_transporter:
+                case TruckType.CarTransporter:
                     return "car transporter";
-                case TruckType.pickup:
+                case TruckType.Pickup:
                     return "pickup";
                 default:
                     return "truck";
             }
         }
 
-        override public string ToString()
+        public override string ToString()
         {
             return base.ToString() + String.Format("Truck type:{0}", this.getType());
         }

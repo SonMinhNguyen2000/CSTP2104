@@ -1,58 +1,84 @@
-﻿using Assignment1.Enum;
+﻿using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using Assignment1.Enum;
 using Assignment1.Interface;
 namespace Assignment1.Entity
 {
     public class Vehicle:IPrint
     {
-        public VehicleType vehicleType;
-        string brand;
-        string model;
-        int year;
-        int price;
-        public Vehicle(string b, string m, int y, int p)
+        VehicleType _vehicleType;
+        string _brand;
+        string _model;
+        int _year;
+        int _price;
+        Engines _engine;
+        public Vehicle(string b, string m, int y, int p, Engines e)
         {
-            this.brand = b;
-            this.year = y;
-            this.model = m;
-            this.price = p;
+            this._brand = b;
+            this._year = y;
+            this._model = m;
+            this._price = p;
+            this._engine = e;
         }
         public string getType()
         {
-            switch (this.vehicleType)
+            switch (this._vehicleType)
             {
-                case VehicleType.four_wheel:
+                case VehicleType.FourWheel:
                     return "four wheel";
-                case VehicleType.two_wheel:
+                case VehicleType.TwoWheel:
                     return "two wheel";
                 default:
                     return "empty";
            }
         }
 
-        public void setModel(string m) { this.model = m; }
+        public void setVehicleType(VehicleType v)
+        {
+            this._vehicleType = v;
+        }
 
-        public string getModel() { return this.model; }
+        public void setModel(string m) { this._model = m; }
 
-        public void setBrand(string b) { this.brand = b; }
+        public string getModel() { return this._model; }
 
-        public string getBrand() { return this.brand; }
+        public void setBrand(string b) { this._brand = b; }
 
-        public void setYear(int y) { this.year = y; }
+        public string getBrand() { return this._brand; }
 
-        public int getYear() { return this.year; }
+        public void setYear(int y) { this._year = y; }
 
-        public void setPrice(int p) { this.price = p; }
+        public int getYear() { return this._year; }
 
-        public int getPrice() { return this.price; }
+        public void setPrice(int p) { this._price = p; }
 
-        override public string ToString()
+        public int getPrice() { return this._price; }
+
+        public string getEngine()
+        {
+            switch (_engine)
+            {
+                case Engines.OneCylinder:
+                    return "one cylinder";
+                case Engines.TwoCylinder:
+                    return "two cylinder";
+                case Engines.ThreeCylinder:
+                    return "three cylinder";
+                case Engines.FourCylinder:
+                    return "four cylinder";
+            }
+            return "";
+        }
+        public override string ToString()
         {
             return String.Format("Model:{0}\n" +
                 "Brand:{1}\n" +
+                "Engine:{5}\n" +
                 "Year:{2}\n" +
-                "Price:{3}\n" +
-                "Vehical type:{4}\n", 
-                this.getModel(), this.getBrand(), this.getYear().ToString(), this.getPrice().ToString(), this.getType());
+                "Price:{3} $\n" +
+                "Vehicle type:{4}\n", 
+                this.getModel(), this.getBrand(), this.getYear().ToString(), 
+                this.getPrice().ToString(), this.getType(), this.getEngine());
         }
     }
 }

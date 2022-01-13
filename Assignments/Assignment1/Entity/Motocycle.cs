@@ -2,33 +2,34 @@
 using Assignment1.Interface;
 namespace Assignment1.Entity
 {
-    public class Motocycle:Vehicle, IPrint
+    public class Motorcycle:Vehicle, IPrint
     {
-        MotocycleType type;
+        MotorcycleType _type;
 
-        public Motocycle(string model, string brand, int year, int price, MotocycleType type):base(model, brand, year, price)
+        public Motorcycle(string model, string brand, int year, int price, Engines e,MotorcycleType type):
+            base(model, brand, year, price, e)
         {
-            this.type = type;
-            this.vehicleType = VehicleType.two_wheel;
+            this._type = type;
+            this.setVehicleType(VehicleType.TwoWheel);
         }
 
-        public string getType()
+        public new string getType()
         {
-            switch (this.type) 
+            switch (this._type) 
             {
-                case MotocycleType.touring:
+                case MotorcycleType.Touring:
                     return "touring";
-                case MotocycleType.sport:
+                case MotorcycleType.Sport:
                     return "sport";
-                case MotocycleType.cruiser:
+                case MotorcycleType.Cruiser:
                     return "cruiser";
                 default:
-                    return "motobike";
+                    return "motorbike";
             }
 
         }
 
-        override public string ToString()
+        public override string ToString()
         {
             return base.ToString() + "Type:"+this.getType();
         }
