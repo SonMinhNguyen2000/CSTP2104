@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment1.Enum
 {
-    public enum VehicleType
+    public enum VehicleTypes
     {
         FourWheel,
         TwoWheel

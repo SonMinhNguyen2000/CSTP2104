@@ -11,7 +11,7 @@ namespace Assignment1.Entity
     {
         public Car(string m, string b, int y, int p, int me ,Engines e):base(m, b, y, p, me,e)
         {
-            this.setVehicleType(VehicleType.FourWheel);
+            this.VehicleType = VehicleTypes.FourWheel;
         }
     }
 }

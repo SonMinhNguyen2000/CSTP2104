@@ -6,7 +6,7 @@ namespace Assignment1.Entity
 {
     public class Vehicle:IPrint
     {
-        VehicleType _vehicleType;
+        VehicleTypes _vehicleType;
         string _brand;
         string _model;
         int _year;
@@ -22,39 +22,56 @@ namespace Assignment1.Entity
             this._mileage = me;
             this._engine = e;
         }
-        public string getType()
+        
+        public string getVehicleType()
         {
             switch (this._vehicleType)
             {
-                case VehicleType.FourWheel:
+                case VehicleTypes.FourWheel:
                     return "four wheel";
-                case VehicleType.TwoWheel:
+                case VehicleTypes.TwoWheel:
                     return "two wheel";
                 default:
                     return "empty";
            }
         }
 
-        public void setVehicleType(VehicleType v)
+        public VehicleTypes VehicleType
         {
-            this._vehicleType = v;
+            set => _vehicleType = value;
         }
 
-        public void setModel(string m) { this._model = m; }
+        public string Model
+        {
+            get => _model;
+            set => _model = value;
+        }
 
-        public string getModel() { return this._model; }
+        public string Brand
+        {
+            get => _brand;
+            set => _brand = value;
+        }
 
-        public void setBrand(string b) { this._brand = b; }
+        public int Year
+        {
+            get => _year;
+            set
+            {
+                if (value < 2007) throw new Exception("Please Enter valid Year");
+                _year = value;
+            }
+        }
 
-        public string getBrand() { return this._brand; }
-
-        public void setYear(int y) { this._year = y; }
-
-        public int getYear() { return this._year; }
-
-        public void setPrice(int p) { this._price = p; }
-
-        public int getPrice() { return this._price; }
+        public int Price
+        {
+            get => _price;
+            set
+            {
+                if (value < 0) throw new Exception("Please Enter valid Year");
+                _price = value;
+            }
+        }
 
         public string getEngine()
         {
@@ -71,15 +88,19 @@ namespace Assignment1.Entity
             }
             return "";
         }
-        
-        public int getMileage()
-        {
-            return _mileage;
-        }
 
-        public void setMileage(int me)
+        public Engines Engine
         {
-            _mileage = me;
+            set => _engine = value;
+        }
+        public int Mileage
+        {
+            get => _mileage;
+            set
+            {
+                if (Mileage < 0) throw new Exception("Please enter valid Mileage");
+                _mileage = value;
+            }
         }
         
         //return vehicle info as a string
@@ -92,8 +113,8 @@ namespace Assignment1.Entity
                 "Year:{2}\n" +
                 "Price:{3} $\n" +
                 "Vehicle type:{4}\n", 
-                this.getModel(), this.getBrand(), this.getYear().ToString(), 
-                this.getPrice().ToString(), this.getType(), this.getEngine(), this.getMileage());
+                _model, _brand, _year.ToString(), 
+                _price.ToString(), getVehicleType(), getEngine(), _mileage);
         }
 
         //convert mileage from km to mile

@@ -4,25 +4,25 @@ namespace Assignment1.Entity
 {
     public class Truck: Car, IPrint
     {
-        TruckType _type;
-        public Truck(string model, string brand, int year, int price, int me, Engines e, TruckType type)
-            :base(model,brand,year,price, me, e)
+        TruckTypes _type;
+        public Truck(string model, string brand, int year, int price, int mileage, Engines engine, TruckTypes type)
+            :base(model,brand,year,price, mileage, engine)
         {
-            this._type = type;
+            _type = type;
         }
 
-        public void setType(TruckType t) { this._type = t;}
-        public new string getType()
+        public void setType(TruckTypes t) { this._type = t;}
+        public string getType()
         {
-            switch(this._type)
+            switch(_type)
             {
-                case TruckType.Ambulance:
+                case TruckTypes.Ambulance:
                     return "Ambulance";
-                case TruckType.FireTruck:
+                case TruckTypes.FireTruck:
                     return "fire truck";
-                case TruckType.CarTransporter:
+                case TruckTypes.CarTransporter:
                     return "car transporter";
-                case TruckType.Pickup:
+                case TruckTypes.Pickup:
                     return "pickup";
                 default:
                     return "truck";
@@ -31,7 +31,7 @@ namespace Assignment1.Entity
 
         public override string ToString()
         {
-            return base.ToString() + String.Format("Truck type:{0}", this.getType());
+            return base.ToString() + String.Format("Truck type:{0}", getType());
         }
     }
 }

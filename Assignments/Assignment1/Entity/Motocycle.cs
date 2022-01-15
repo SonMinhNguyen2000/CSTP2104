@@ -4,35 +4,39 @@ namespace Assignment1.Entity
 {
     public class Motorcycle:Vehicle, IPrint
     {
-        MotorcycleType _type;
+        MotorcycleTypes _type;
 
         public Motorcycle(string model, string brand, int year, int price, int mileage, Engines e,
-            MotorcycleType type) :
+            MotorcycleTypes type) :
             base(model, brand, year, price, mileage, e)
         {
-            this._type = type;
-            this.setVehicleType(VehicleType.TwoWheel);
+            _type = type;
+            VehicleType = VehicleTypes.TwoWheel;
         }
 
-        public new string getType()
+        public string getType()
         {
             switch (this._type) 
             {
-                case MotorcycleType.Touring:
+                case MotorcycleTypes.Touring:
                     return "touring";
-                case MotorcycleType.Sport:
+                case MotorcycleTypes.Sport:
                     return "sport";
-                case MotorcycleType.Cruiser:
+                case MotorcycleTypes.Cruiser:
                     return "cruiser";
                 default:
                     return "motorbike";
             }
+        }
 
+        public MotorcycleTypes MotorcycleType
+        {
+            set => _type = value;
         }
 
         public override string ToString()
         {
-            return base.ToString() + "Type:"+this.getType();
+            return base.ToString() + "Type:"+getType();
         }
     }
 }

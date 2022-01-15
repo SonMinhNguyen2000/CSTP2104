@@ -8,6 +8,6 @@ namespace Assignment1.Interface
 {
     interface IPrint
     {
-        string ToString();
+         string ToString();
     }
 }
