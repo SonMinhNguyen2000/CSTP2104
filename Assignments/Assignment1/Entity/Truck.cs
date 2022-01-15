@@ -2,7 +2,7 @@
 using Assignment1.Interface;
 namespace Assignment1.Entity
 {
-    public class Truck: Car, IPrint
+    public class Truck: Car
     {
         TruckTypes _type;
         public Truck(string model, string brand, int year, int price, int mileage, Engines engine, TruckTypes type)
