@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 using WindowsAppLib.OOD;
 
 
@@ -8,23 +10,122 @@ namespace WindowsAppConsole
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Welcome to Windows Application Development !");
+            Console.BackgroundColor = ConsoleColor.Black;
 
             Car car = new Car()
             {
-                Engine = engines.four_cylinders,
-                Brand = "Mercedes",
-                Year = 2019
+                Engine = Engines.Cylinder_4,
+                Make = Makes.BMW,
+                Year = 2021,
+                Model = "X3"
             };
 
             Car car2 = new Car()
             {
-                Model = "2XYZ",
-                Engine = engines.four_cylinders,
-                Brand = "Merceds",
-                //Year = 2021
+                Engine = Engines.Cylinder_4,
+                Make = Makes.Toyota,
+                Year = 2020,
+                Model = "Corola"
             };
+
+            Program.Display1(car);
+            Program.Display1(car2);
+
+            Vehicle v = car; // upcast
+            Car car3 = (Car)v; // downcast
+
+            var m = new Motorcycle();
+            Vehicle vt = m;
+            // Car car4 = (Car)vt;  // run-time error InvalidCastException
+
+            // as operator
+            // is operator 
+
+            var values = new int[] { 2, 4, 5, 8 };
+            var result = Program.Calculate(values, new Squarer());
+            Program.Display(result);
+
+            result = Program.Calculate(values, new Cuber());
+            Program.Display(result);
+
+            result = Program.Calculate(values, new CustomCalculator());
+            Program.Display(result);
+
+            string s = "123";
+            var isCapitalized = s.IsCapitalized();
+            Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
+            
+            s = "Ace";
+            isCapitalized = s.IsCapitalized();
+            Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
+
+            s = "base";
+            isCapitalized = s.IsCapitalized();
+            Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
+
+            s = "";
+            isCapitalized = s.IsCapitalized();
+            Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
+
+            s = null;
+            isCapitalized = s.IsCapitalized();
+            Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
+            int x = 2;
+        }
+
+        public static int[] Calculate(int[] values, ICalculator calculator)
+        {
+            int[] result = new int[values.Length];
+            for (int i = 0; i < values.Length; i++)
+            {
+                var r = calculator.Calculate(values[i]);
+                result[i] = r;
+            }
+
+            return result;
+        }
+
+        public static void Display(int[] values)
+        {
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.WriteLine($"i={i} {values[i]}");
+            }
+        }
+
+        public static void Display1(Vehicle vehicle)
+        {
+            Console.WriteLine(vehicle.Make);
+            Console.WriteLine(vehicle.Model);
+            Console.WriteLine(vehicle.Year);
+        }
+
+        public static void Display2(Truck truck)
+        {
+
+        }
+    }
+
+    public static class StringHelper
+    {
+        // Extension method
+        public static bool IsCapitalized(this string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return false;
+            }
+
+            return char.IsUpper(s[0]);
+        }
+
+        public static bool isMax(this int i)
+        {
+            return i > 10;
         }
     }
 }
