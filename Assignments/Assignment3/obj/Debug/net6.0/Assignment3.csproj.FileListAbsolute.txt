@@ -1,0 +1,15 @@
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/bin/Debug/net6.0/Assignment3
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/bin/Debug/net6.0/Assignment3.deps.json
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/bin/Debug/net6.0/Assignment3.runtimeconfig.json
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/bin/Debug/net6.0/Assignment3.dll
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/bin/Debug/net6.0/Assignment3.pdb
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.csproj.AssemblyReference.cache
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.AssemblyInfoInputs.cache
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.AssemblyInfo.cs
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.csproj.CoreCompileInputs.cache
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.dll
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/refint/Assignment3.dll
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.pdb
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/Assignment3.genruntimeconfig.cache
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/Debug/net6.0/ref/Assignment3.dll

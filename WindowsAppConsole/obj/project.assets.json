@@ -27,34 +27,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sonmi\\.nuget\\packages\\": {}
+    "/Users/sonminhnguyen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
+      "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj",
       "projectName": "WindowsAppConsole",
-      "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
-      "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\obj\\",
+      "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj",
+      "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
+      "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj": {
-              "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj"
+            "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj": {
+              "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj"
             }
           }
         }
@@ -83,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sonmi\\.nuget\\packages\\": {}
+    "/Users/sonminhnguyen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
+      "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj",
       "projectName": "WindowsAppLib",
-      "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
-      "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\obj\\",
+      "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj",
+      "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
+      "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }

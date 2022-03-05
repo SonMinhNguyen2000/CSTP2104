@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5dzBHeLs04BWhqNSzAQg0nIABlO9tTF2k3qxd8UFptkZu7/ODisy77Yy5lnfRpPoH58eN9I60ynnu0/xvw/68Q==",
+  "dgSpecHash": "pWb8VURYHSZ+tAAfsxK/ORjQlhV3469mCbqaa5m8eabYXxC37vgwgWQvM3s3tvHxuTn/Yyufv1P8oHBP76lkwA==",
   "success": true,
-  "projectFilePath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
+  "projectFilePath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

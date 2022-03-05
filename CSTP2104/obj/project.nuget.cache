@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+XAWH4Wu1bfFEQXRCMDzSB6JghrVjf4j8UPsHrHrklXukWWM/cHZzNpepoPv+3PlG75AAalc+sJqtnc5fVn2fw==",
+  "dgSpecHash": "7wOHepSCM6TzQoC+eXF9I/2yCyWvYLTTCF2isHCF9DiJWeLI+EDRaP3GG+eOvV4NUnDmV2sMM5zqAT+hDtBvCw==",
   "success": true,
-  "projectFilePath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
+  "projectFilePath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

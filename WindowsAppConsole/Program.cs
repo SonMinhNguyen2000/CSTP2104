@@ -2,13 +2,49 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using WindowsAppLib.OOD;
-
+using System.Threading;
+using WindowsAppLib.MultiThread;
 
 namespace WindowsAppConsole
 {
     class Program
     {
+        //Thread, multi-threading
+        //concurrency,
+        //
+
+        
         static void Main(string[] args)
+        {
+            //Week2Examples();
+            Week3Examples();
+            Console.WriteLine("\nPress any key");
+            Console.ReadKey();
+            Console.WriteLine("App terminated");
+
+        }
+
+        static void Week3Examples()
+        {
+            try
+            {
+                // var threadRun = new ThreadExample();
+                // threadRun.RunAThread();
+
+                var taskRun = new TaskExamples();
+                // taskRun.RunTask();
+                // taskRun.RunTask2();
+                // taskRun.RunTask3();
+                // taskRun.RunTask4();
+                taskRun.RunAsParallel2();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"exception throw: {e.Message}");
+            }
+        }
+        
+        static void Week2Examples()
         {
             Console.WriteLine("Hello World!");
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -76,8 +112,8 @@ namespace WindowsAppConsole
             Console.WriteLine($"{s} IsCapitalized:{isCapitalized}");
             int x = 2;
         }
-
-        public static int[] Calculate(int[] values, ICalculator calculator)
+        
+        static int[] Calculate(int[] values, ICalculator calculator)
         {
             int[] result = new int[values.Length];
             for (int i = 0; i < values.Length; i++)
@@ -89,7 +125,7 @@ namespace WindowsAppConsole
             return result;
         }
 
-        public static void Display(int[] values)
+        static void Display(int[] values)
         {
             for (int i = 0; i < values.Length; i++)
             {
@@ -97,7 +133,7 @@ namespace WindowsAppConsole
             }
         }
 
-        public static void Display1(Vehicle vehicle)
+        static void Display1(Vehicle vehicle)
         {
             Console.WriteLine(vehicle.Make);
             Console.WriteLine(vehicle.Model);
