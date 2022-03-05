@@ -7,13 +7,13 @@ public class Program
 {
     static void Main(string[] args)
     {
-        DatabaseService conn = new DatabaseService();
+        DatabaseService dbService = new DatabaseService();
         
         //student table
-        conn.Query(
+        dbService.Query(
             "create table Students(Name VARCHAR(50), ID INTEGER, StreetAddress VARCHAR(100), City VARCHAR(50), Province VARCHAR(50), Country VARCHAR(50), PostalCode VARCHAR(6), Email VARCHAR(100), PhoneNumber INTEGER, ProgramID INTEGER)");
-        conn.Execute();
-        conn.Query(
+        dbService.Execute();
+        dbService.Query(
             "insert into Students(Name, ID, StreetAddress, City, Province, Country, PostalCode, Email, PhoneNumber, ProgramID) values (@name, @id, @address, @city, @province, @country, @pc, @email, @pn, @pid)");
         List<Student> students = new List<Student>()
         {
@@ -23,25 +23,25 @@ public class Program
         };
         foreach (Student s in students)
         {
-            conn.Bind("@name", s.Name);
-            conn.Bind("@id", s.Id.ToString());
-            conn.Bind("@address", s.StreetAddress);
-            conn.Bind("@city", s.City);
-            conn.Bind("@province", s.Province);
-            conn.Bind("@country", s.Country);
-            conn.Bind("@pc", s.PostalCode);
-            conn.Bind("@email", s.Email);
-            conn.Bind("@pn", s.PhoneNumber);
-            conn.Bind("@pid", s.ProgramId.ToString());
-            conn.Execute();
-            conn.ClearQuery();
+            dbService.Bind("@name", s.Name);
+            dbService.Bind("@id", s.Id.ToString());
+            dbService.Bind("@address", s.StreetAddress);
+            dbService.Bind("@city", s.City);
+            dbService.Bind("@province", s.Province);
+            dbService.Bind("@country", s.Country);
+            dbService.Bind("@pc", s.PostalCode);
+            dbService.Bind("@email", s.Email);
+            dbService.Bind("@pn", s.PhoneNumber);
+            dbService.Bind("@pid", s.ProgramId.ToString());
+            dbService.Execute();
+            dbService.ClearQuery();
         }
-        conn.PrintAll("Students");
+        dbService.PrintAll("Students");
         
         //course table 
-        conn.Query("create table Courses(ID INTEGER, Name VARCHAR(10), Description VARCHAR(500), Credit INTEGER)");
-        conn.Execute();
-        conn.Query("insert into Courses(ID, Name, Description, Credit) values(@id, @n, @d, @c)");
+        dbService.Query("create table Courses(ID INTEGER, Name VARCHAR(10), Description VARCHAR(500), Credit INTEGER)");
+        dbService.Execute();
+        dbService.Query("insert into Courses(ID, Name, Description, Credit) values(@id, @n, @d, @c)");
         List<Course> courses = new List<Course>()
         {
             new Course(1, "Algebra", "Math class", 3),
@@ -50,19 +50,19 @@ public class Program
         };
         foreach (Course c in courses)
         {
-            conn.Bind("@id", c.Id.ToString());
-            conn.Bind("@n", c.Name);
-            conn.Bind("@d", c.Description);
-            conn.Bind("@c", c.Credit.ToString());
-            conn.Execute();
-            conn.ClearQuery();
+            dbService.Bind("@id", c.Id.ToString());
+            dbService.Bind("@n", c.Name);
+            dbService.Bind("@d", c.Description);
+            dbService.Bind("@c", c.Credit.ToString());
+            dbService.Execute();
+            dbService.ClearQuery();
         }
-        conn.PrintAll("Courses");
+        dbService.PrintAll("Courses");
         
         //Program table
-        conn.Query("create table Programs(ID INTEGER , Name VARCHAR(10), Description VARCHAR(500))");
-        conn.Execute();
-        conn.Query("insert into Programs(ID, Name, Description) values(@id, @n, @d)");
+        dbService.Query("create table Programs(ID INTEGER , Name VARCHAR(10), Description VARCHAR(500))");
+        dbService.Execute();
+        dbService.Query("insert into Programs(ID, Name, Description) values(@id, @n, @d)");
         List<Assignment4.Entities.Program> programs = new List<Assignment4.Entities.Program>()
         {
             new Assignment4.Entities.Program(1, "Computer Science", "software developing program"),
@@ -71,18 +71,18 @@ public class Program
         };
         foreach (var p in programs)
         {
-            conn.Bind("@id", p.Id.ToString());
-            conn.Bind("@n", p.Name);
-            conn.Bind("@d", p.Description);
-            conn.Execute();
-            conn.ClearQuery();
+            dbService.Bind("@id", p.Id.ToString());
+            dbService.Bind("@n", p.Name);
+            dbService.Bind("@d", p.Description);
+            dbService.Execute();
+            dbService.ClearQuery();
         }
-        conn.PrintAll("Programs");
+        dbService.PrintAll("Programs");
         
         //ProgramCourse table
-        conn.Query("create table ProgramCourse(ProgramID INTEGER, CourseID INTEGER, Required INTEGER )");
-        conn.Execute();
-        conn.Query("insert into ProgramCourse(ProgramID, CourseID, Required) values (@pid, @cid, @r)");
+        dbService.Query("create table ProgramCourse(ProgramID INTEGER, CourseID INTEGER, Required INTEGER )");
+        dbService.Execute();
+        dbService.Query("insert into ProgramCourse(ProgramID, CourseID, Required) values (@pid, @cid, @r)");
         List<ProgramCourse> programsCourses = new List<ProgramCourse>()
         {
             new ProgramCourse(1, 2, true),
@@ -91,14 +91,14 @@ public class Program
         };
         foreach (var pc in programsCourses)
         {
-            conn.Bind("@pid", pc.ProgramId.ToString());
-            conn.Bind("@cid", pc.CourseId.ToString());
-            conn.Bind("@r", (pc.Required?1:0).ToString());
-            conn.Execute();
-            conn.ClearQuery();
+            dbService.Bind("@pid", pc.ProgramId.ToString());
+            dbService.Bind("@cid", pc.CourseId.ToString());
+            dbService.Bind("@r", (pc.Required?1:0).ToString());
+            dbService.Execute();
+            dbService.ClearQuery();
         }
-        conn.PrintAll("ProgramCourse");
-        conn.Close();
+        dbService.PrintAll("ProgramCourse");
+        dbService.Close();
     }
     
 }
