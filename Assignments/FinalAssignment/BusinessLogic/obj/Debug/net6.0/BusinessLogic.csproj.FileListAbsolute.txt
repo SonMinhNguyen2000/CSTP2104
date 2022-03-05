@@ -1,0 +1,12 @@
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\bin\Debug\net6.0\ref\BusinessLogic.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb

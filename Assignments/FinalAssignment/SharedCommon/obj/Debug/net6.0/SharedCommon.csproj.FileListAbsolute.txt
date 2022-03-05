@@ -1,0 +1,11 @@
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\bin\Debug\net6.0\SharedCommon.deps.json
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\bin\Debug\net6.0\SharedCommon.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\bin\Debug\net6.0\ref\SharedCommon.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\bin\Debug\net6.0\SharedCommon.pdb
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.AssemblyInfoInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.AssemblyInfo.cs
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.csproj.CoreCompileInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\ref\SharedCommon.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\SharedCommon\obj\Debug\net6.0\SharedCommon.pdb

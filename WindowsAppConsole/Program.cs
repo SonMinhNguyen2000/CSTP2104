@@ -26,6 +26,14 @@ namespace WindowsAppConsole
         {
             var adonetexample = new AdoNetExample();
             adonetexample.CreateAndAddRow();
+            try
+            {
+                adonetexample.GetStudents();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception is thrown: {0}", e.Message);
+            }
         }
 
         static void Week3Examples()

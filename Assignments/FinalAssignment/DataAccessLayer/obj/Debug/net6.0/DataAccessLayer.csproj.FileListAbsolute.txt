@@ -1,0 +1,12 @@
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\bin\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+D:\Users\sonmi\UWP\CSTP2104\Assignments\FinalAssignment\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb

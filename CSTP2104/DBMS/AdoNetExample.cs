@@ -1,9 +1,15 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System.Text;
+using Microsoft.Data.Sqlite;
 
 namespace WindowsAppLib.DBMS;
 
 public class AdoNetExample
 {
+    //connection strings for Microsoft SQL
+    //string connString = "Server=myServer;Database=myDatabase; User Id=myUserId; Password=yPassword";
+    //string connString = "Server=myServer; Database=myDatabase; Trusted_Connection=True";
+    //string connString = "DataSource=.;Initial Catalog=master;Integrated Security=True";
+    //string connString = "DataSource=.\SQLEXPRESS;Initial Catalog=master; Integrated Security=True";
     public SqliteConnection OpenConnection()
     {
         SqliteConnection connection = new SqliteConnection();
@@ -50,9 +56,40 @@ public class AdoNetExample
         connection.Close();
     }
 
-    public void Insert()
+    public List<string> GetStudents()
     {
-        
+        var studentRecords = new List<String>();
+        var stringBuilder = new StringBuilder();
+        try
+        {
+            using (var connection = OpenConnection())
+            {
+                connection.Open();
+                var commandText = "select * from students";
+                using (var command = new SqliteCommand(commandText, connection))
+                {
+                    command.CommandText = commandText;
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        stringBuilder.AppendLine("=============");
+                        stringBuilder.AppendLine(reader[0].ToString());
+                        stringBuilder.AppendLine(reader[1].ToString());
+                        stringBuilder.AppendLine(reader[2].ToString());
+                        stringBuilder.AppendLine(reader[3].ToString());
+                        studentRecords.Add(stringBuilder.ToString());
+                        stringBuilder.Clear();
+                    }                
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Exception is thrown: {0}", e.Message);
+            throw;
+        }
+
+        return studentRecords;
     }
 
 }
