@@ -98,6 +98,7 @@ public class Program
             conn.ClearQuery();
         }
         conn.PrintAll("ProgramCourse");
+        conn.Close();
     }
     
 }
