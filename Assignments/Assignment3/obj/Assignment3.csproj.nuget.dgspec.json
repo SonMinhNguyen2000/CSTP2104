@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/Assignment3.csproj": {}
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\Assignment3\\Assignment3.csproj": {}
   },
   "projects": {
-    "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/Assignment3.csproj": {
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\Assignment3\\Assignment3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/Assignment3.csproj",
+        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\Assignment3\\Assignment3.csproj",
         "projectName": "Assignment3",
-        "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/Assignment3.csproj",
-        "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
-        "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/Assignment3/obj/",
+        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\Assignment3\\Assignment3.csproj",
+        "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\Assignment3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj": {}
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj": {}
   },
   "projects": {
-    "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj": {
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj",
+        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
         "projectName": "WindowsAppLib",
-        "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj",
-        "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
-        "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/obj/",
+        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj",
+        "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.0-preview.1.22076.6, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.0-preview.1.22076.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,34 +68,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj": {
+    "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj",
+        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
         "projectName": "WindowsAppConsole",
-        "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/WindowsAppConsole.csproj",
-        "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
-        "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/WindowsAppConsole/obj/",
+        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\WindowsAppConsole.csproj",
+        "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\WindowsAppConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj": {
-                "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/CSTP2104/WindowsAppLib.csproj"
+              "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj": {
+                "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\CSTP2104\\WindowsAppLib.csproj"
               }
             }
           }
@@ -93,6 +111,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.0-preview.1.22076.6, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.0-preview.1.22076.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -108,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

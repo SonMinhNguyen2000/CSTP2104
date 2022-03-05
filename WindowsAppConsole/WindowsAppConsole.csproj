@@ -11,4 +11,10 @@
     <ProjectReference Include="..\CSTP2104\WindowsAppLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0-preview.1.22076.6" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.0-preview.1.22076.6" />
+  </ItemGroup>
+
 </Project>

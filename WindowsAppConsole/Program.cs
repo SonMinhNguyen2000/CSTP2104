@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using WindowsAppLib.OOD;
 using System.Threading;
+using WindowsAppLib.DBMS;
 using WindowsAppLib.MultiThread;
 
 namespace WindowsAppConsole
@@ -17,11 +18,14 @@ namespace WindowsAppConsole
         static void Main(string[] args)
         {
             //Week2Examples();
-            Week3Examples();
-            Console.WriteLine("\nPress any key");
-            Console.ReadKey();
-            Console.WriteLine("App terminated");
+            //Week3Examples();
+            Week4Examples();
+        }
 
+        static void Week4Examples()
+        {
+            var adonetexample = new AdoNetExample();
+            adonetexample.CreateAndAddRow();
         }
 
         static void Week3Examples()
