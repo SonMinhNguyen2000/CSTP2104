@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\FinalAssignment\\SharedCommon\\SharedCommon.csproj": {}
+    "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/SharedCommon/SharedCommon.csproj": {}
   },
   "projects": {
-    "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\FinalAssignment\\SharedCommon\\SharedCommon.csproj": {
+    "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/SharedCommon/SharedCommon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\FinalAssignment\\SharedCommon\\SharedCommon.csproj",
+        "projectUniqueName": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/SharedCommon/SharedCommon.csproj",
         "projectName": "SharedCommon",
-        "projectPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\FinalAssignment\\SharedCommon\\SharedCommon.csproj",
-        "packagesPath": "C:\\Users\\sonmi\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\sonmi\\UWP\\CSTP2104\\Assignments\\FinalAssignment\\SharedCommon\\obj\\",
+        "projectPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/SharedCommon/SharedCommon.csproj",
+        "packagesPath": "/Users/sonminhnguyen/.nuget/packages/",
+        "outputPath": "/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/SharedCommon/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sonmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sonminhnguyen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/sonminhnguyen/.dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

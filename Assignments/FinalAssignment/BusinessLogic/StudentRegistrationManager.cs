@@ -1,6 +1,6 @@
 ﻿namespace BusinessLogic;
-using SharedCommon.Entities;
-using SharedCommon.Interfaces;
+using Shared.Entities;
+using Shared.Interfaces;
 public class StudentRegistrationManager
 {
     private readonly IStudentRepository _studentRepository;
