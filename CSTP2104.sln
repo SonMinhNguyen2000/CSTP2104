@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalAssignment", "FinalAss
 	ProjectSection(SolutionItems) = preProject
 		Assignments\FinalAssignment\ideation.md = Assignments\FinalAssignment\ideation.md
 		Assignments\FinalAssignment\readme.md = Assignments\FinalAssignment\readme.md
+		Assignments\FinalAssignment\Srs.md = Assignments\FinalAssignment\Srs.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "Assignments\FinalAssignment\DataAccessLayer\DataAccessLayer.csproj", "{02870873-320C-4AA4-B7DB-9AE75F51CE4B}"
