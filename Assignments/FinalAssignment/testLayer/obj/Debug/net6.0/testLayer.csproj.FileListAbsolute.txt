@@ -37,3 +37,5 @@
 /Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/testLayer/obj/Debug/net6.0/testLayer.pdb
 /Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/testLayer/obj/Debug/net6.0/testLayer.genruntimeconfig.cache
 /Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/testLayer/obj/Debug/net6.0/ref/testLayer.dll
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/testLayer/bin/Debug/net6.0/BusinessLogic.dll
+/Users/sonminhnguyen/RiderProjects/CSTP2104/Assignments/FinalAssignment/testLayer/bin/Debug/net6.0/BusinessLogic.pdb

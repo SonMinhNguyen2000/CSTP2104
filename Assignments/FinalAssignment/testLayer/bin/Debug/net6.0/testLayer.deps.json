@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "testLayer/1.0.0": {
         "dependencies": {
+          "BusinessLogic": "1.0.0",
           "DataAccessLayer": "1.0.0",
           "MySql.Data": "8.0.28"
         },
@@ -214,6 +215,14 @@
           }
         }
       },
+      "BusinessLogic/1.0.0": {
+        "dependencies": {
+          "SharedCommon": "1.0.0"
+        },
+        "runtime": {
+          "BusinessLogic.dll": {}
+        }
+      },
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "MySql.Data": "8.0.28",
@@ -371,6 +380,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DataAccessLayer/1.0.0": {
       "type": "project",

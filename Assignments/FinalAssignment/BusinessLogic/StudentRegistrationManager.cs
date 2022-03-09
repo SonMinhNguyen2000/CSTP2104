@@ -15,4 +15,24 @@ public class StudentRegistrationManager
         var students = _studentRepository.GetStudents();
         return students;
     }
+
+    public List<Student> GetStudentByName(string name)
+    {
+        return _studentRepository.SearchStudentByName(name);
+    }
+
+    public void UpdateStudent(int studentId, string attribute, string value)
+    {
+        _studentRepository.UpdateStudent(studentId, attribute, value);
+    }
+
+    public void DeleteStudent(int studentId)
+    {
+        _studentRepository.DeleteStudent(studentId);
+    }
+
+    public void AddNewStudent(Student s)
+    {
+        _studentRepository.CreateStudent(s);
+    }
 }

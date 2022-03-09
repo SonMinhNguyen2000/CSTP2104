@@ -30,10 +30,13 @@ public class StudentRepository : IStudentRepository
 
     public void CreateStudent(Student s)
     {
-        _dataService.Query("insert into student(FirstName, LastName, ProgramId) values (@n, @pid)");
+        _dataService.Query("insert into student(Id, Name, ProgramId) values (@id, @n, @pid)");
+        _dataService.Bind("@id", s.GetId());
         _dataService.Bind("@n", s.Name);
         _dataService.Bind("@pid", s.ProgramId);
-        _dataService.Execute();
+        var reader = _dataService.Execute();
+        _dataService.ClearQuery();
+        reader.Close();
     }
 
     public Student GetStudent(int studentId)
@@ -52,14 +55,19 @@ public class StudentRepository : IStudentRepository
     {
         _dataService.Query("delete from student where Id=@sid");
         _dataService.Bind("@sid", studentId.ToString());
-        _dataService.Execute();
+        var reader = _dataService.Execute();
+        _dataService.ClearQuery();
+        reader.Close();
     }
 
-    public void UpdateStudent(int studentId, string attibute, string value)
+    public void UpdateStudent(int studentId, string attribute, string value)
     {
-        _dataService.Query($"update student set {attibute}=value where Id=@sid");
+        _dataService.Query($"update student set {attribute}=@value where Id=@sid");
         _dataService.Bind("@sid", studentId.ToString());
-        _dataService.Execute();
+        _dataService.Bind("@value", value);
+        var reader =_dataService.Execute();
+        _dataService.ClearQuery();
+        reader.Close();
     }
 
     public List<Student> SearchStudentByName(string name)
@@ -68,6 +76,7 @@ public class StudentRepository : IStudentRepository
         _dataService.Query("select * from student where Name like @n ");
         _dataService.Bind("@n","%"+name+"%");
         var reader = _dataService.Execute();
+        _dataService.ClearQuery();
         while (reader.Read())
         {
             students.Add(new Student(
