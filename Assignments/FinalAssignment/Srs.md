@@ -48,3 +48,8 @@
 3. Other nonfunctional requirements.
    - Performance: The app should run and always receive the required information.
    - Security and safety: Ensure only admin and teachers who are authorized can use it.
+
+---
+<div style="background-color: darkgray; padding: 10px">
+  ©2022 Son Minh Nguyen  
+</div>
