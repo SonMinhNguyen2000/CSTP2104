@@ -6,7 +6,7 @@ using testLayer.Test;
 
 namespace testLayer;
 
-public static class Program
+public static class TestLayer
 {
     static void Main(string[] args)
     {
@@ -19,9 +19,9 @@ public static class Program
         dataSource.RunTestScript("../../../MockData/data.sql");
         
         //initialize mock repositories
-        StudentRepository studentRepo = new StudentRepository(dataSource);
+        MockStudentRepository studentRepo = new MockStudentRepository(dataSource);
         MockCourseRepository courseRepo = new MockCourseRepository(dataSource);
-        ProgramRepository programRepo = new ProgramRepository(dataSource, courseRepo);
+        MockProgramRepository programRepo = new MockProgramRepository(dataSource, courseRepo);
         
         //initialize mock managers
         MockCourseEnrollmentManager enrollRepo = new MockCourseEnrollmentManager(courseRepo, studentRepo, programRepo);

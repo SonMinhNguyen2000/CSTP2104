@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalAssignment", "FinalAssignment", "{0B3DB803-BF39-409B-98BB-D4322CD19624}"
 	ProjectSection(SolutionItems) = preProject
 		Assignments\FinalAssignment\ProjectDocument.md = Assignments\FinalAssignment\ProjectDocument.md
+		Assignments\FinalAssignment\EntityDiagram.png = Assignments\FinalAssignment\EntityDiagram.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "Assignments\FinalAssignment\DataAccessLayer\DataAccessLayer.csproj", "{02870873-320C-4AA4-B7DB-9AE75F51CE4B}"
