@@ -10,7 +10,7 @@ public class StudentRepository : IStudentRepository
     public IDataService _dataService { get; set; }
     
     
-    public List<Student> GetStudents()
+    public List<Student> GetStudents() 
     {
         List<Student> students = new List<Student>();
         _dataService.Query("select * from student");
@@ -39,19 +39,7 @@ public class StudentRepository : IStudentRepository
         reader.Close();
     }
 
-    public Student GetStudent(int studentId)
-    {
-        _dataService.Query("Select * from student where Id=@sid");
-        _dataService.Bind("@sid", studentId.ToString());
-        var reader = _dataService.Execute();
-        return new Student(
-            reader["Id"].ToString(),
-            reader["Name"].ToString(),
-            reader["ProgramId"].ToString()
-        );
-    }
-
-    public void DeleteStudent(int studentId)
+    public void DeleteStudent(string studentId)
     {
         _dataService.Query("delete from student where Id=@sid");
         _dataService.Bind("@sid", studentId.ToString());
@@ -60,7 +48,7 @@ public class StudentRepository : IStudentRepository
         reader.Close();
     }
 
-    public void UpdateStudent(int studentId, string attribute, string value)
+    public void UpdateStudent(string studentId, string attribute, string value)
     {
         _dataService.Query($"update student set {attribute}=@value where Id=@sid");
         _dataService.Bind("@sid", studentId.ToString());
@@ -70,23 +58,8 @@ public class StudentRepository : IStudentRepository
         reader.Close();
     }
 
-    public List<Student> SearchStudentByName(string name)
+    public List<Student> GetFilteredStudent(IFilter<Student> filter, ISpecification<Student> spec )
     {
-        List<Student> students = new List<Student>();
-        _dataService.Query("select * from student where Name like @n ");
-        _dataService.Bind("@n","%"+name+"%");
-        var reader = _dataService.Execute();
-        _dataService.ClearQuery();
-        while (reader.Read())
-        {
-            students.Add(new Student(
-                    reader["Id"].ToString(),
-                    reader["Name"].ToString(),
-                    reader["ProgramId"].ToString()
-                )
-            );
-        }
-        reader.Close();
-        return students;
+        return filter.Filtering(GetStudents(), spec);
     }
 }

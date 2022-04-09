@@ -1,4 +1,6 @@
-﻿namespace BusinessLogic;
+﻿using Shared.Entities.StudentFilter;
+
+namespace BusinessLogic;
 using Shared.Entities;
 using Shared.Interfaces;
 public class StudentRegistrationManager
@@ -16,22 +18,22 @@ public class StudentRegistrationManager
         return students;
     }
 
-    public List<Student> GetStudentByName(string name)
+    public List<Student> GetFilteredStudents(IFilter<Student> filter, ISpecification<Student> spec)
     {
-        return _studentRepository.SearchStudentByName(name);
+        return _studentRepository.GetFilteredStudent(filter, spec);
     }
 
-    public void UpdateStudent(int studentId, string attribute, string value)
+    public void UpdateStudent(string studentId, string attribute, string value)
     {
         _studentRepository.UpdateStudent(studentId, attribute, value);
     }
-
-    public void DeleteStudent(int studentId)
+    
+    public void DeleteStudent(string studentId)
     {
         _studentRepository.DeleteStudent(studentId);
     }
 
-    public void AddNewStudent(Student s)
+    public void RegisterStudent(Student s)
     {
         _studentRepository.CreateStudent(s);
     }

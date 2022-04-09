@@ -5,6 +5,7 @@ create table program(ProgramId INT auto_increment primary key,
                      Name char(50) not null);
 create table course(CourseId INT auto_increment primary key, 
                     Name char(50) not null, 
+                    Description char(200) not null,
                     PrerequisiteId INT);
 create table programCourse(ProgramId Int, 
                            CourseId INT, 
@@ -32,6 +33,15 @@ create table student (Id INT auto_increment primary key,
                       Name char(50) not null, 
                       ProgramId INT not null,
                       foreign key (ProgramId) references program(ProgramId));
-insert into program(Name) values ('Computer system technology'),('Hospitality');
+create table StudentCourses (StudentId INT not null, 
+                             CourseId INT not null,
+                             SemesterId INT not null,
+                             Grader INT,
+                             primary key (StudentId, CourseId, SemesterId),
+                             foreign key (StudentId) references student(Id),
+                             foreign key (CourseId) references  course(CourseId),
+                             foreign key (SemesterId) references semester(Id)
+                             );
+insert into program(Name) values ('Computer system technology');
 insert into student(Name, ProgramId) values ('Son Minh Nguyen', 1),('Nicole Tan', 1);
 

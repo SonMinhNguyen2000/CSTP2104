@@ -1,4 +1,5 @@
 ﻿using System.Dynamic;
+using System.Text;
 
 namespace Shared.Entities;
 
@@ -18,5 +19,10 @@ public class Student
     public string GetId()
     {
         return _id;
+    }
+
+    public override string ToString()
+    {
+        return $"student id: {_id}\nstudent name: {Name}\nProgram Id: {ProgramId}";
     }
 }
