@@ -21,11 +21,6 @@ public class CourseEnrollmentManager
         ProgramRepo = pRepo;
     }
 
-    public void EnrollStudent(string studentId, string courseId, string semesterId)
-    {
-        
-    }
-
     public List<Course>? GetSuggestCourse(string studentId)
     {
         var student = getStudentById(studentId);
