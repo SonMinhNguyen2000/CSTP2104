@@ -6,12 +6,18 @@ public class Course
     public string CourseName { get; }
     public string CourseDescription { get; }
     
-    public string PreRequisiteId { get; }
+    public bool hasPrerequisite { get; }
     
-    public Course(string id, string name, string description)
+    public Course(string id, string name, string description, bool hp)
     {
         CourseID = id;
         CourseName = name;
         CourseDescription = description;
+        hasPrerequisite = hp;
+    }
+
+    public override string ToString()
+    {
+        return $"Course id: {CourseID} courseName: {CourseName}";
     }
 }

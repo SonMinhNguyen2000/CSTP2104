@@ -7,14 +7,18 @@ using Shared.Interfaces;
 
 public class StudentRepository : IStudentRepository
 {
-    public IDataService _dataService { get; set; }
-    
-    
+    public IDataService DataService { get; set; }
+
+    public StudentRepository(IDataService dataSource)
+    {
+        DataService = dataSource;
+    }
+
     public List<Student> GetStudents() 
     {
         List<Student> students = new List<Student>();
-        _dataService.Query("select * from student");
-        var reader = _dataService.Execute();
+        DataService.Query("select * from student");
+        var reader = DataService.Execute();
         while (reader.Read())
         {
             students.Add(new Student(
@@ -24,37 +28,38 @@ public class StudentRepository : IStudentRepository
                 )
             );
         }
+        DataService.ClearQuery();
         reader.Close();
         return students;
     }
 
     public void CreateStudent(Student s)
     {
-        _dataService.Query("insert into student(Id, Name, ProgramId) values (@id, @n, @pid)");
-        _dataService.Bind("@id", s.GetId());
-        _dataService.Bind("@n", s.Name);
-        _dataService.Bind("@pid", s.ProgramId);
-        var reader = _dataService.Execute();
-        _dataService.ClearQuery();
+        DataService.Query("insert into student(Id, Name, ProgramId) values (@id, @n, @pid)");
+        DataService.Bind("@id", s.GetId());
+        DataService.Bind("@n", s.Name);
+        DataService.Bind("@pid", s.ProgramId);
+        var reader = DataService.Execute();
+        DataService.ClearQuery();
         reader.Close();
     }
 
     public void DeleteStudent(string studentId)
     {
-        _dataService.Query("delete from student where Id=@sid");
-        _dataService.Bind("@sid", studentId.ToString());
-        var reader = _dataService.Execute();
-        _dataService.ClearQuery();
+        DataService.Query("delete from student where Id=@sid");
+        DataService.Bind("@sid", studentId.ToString());
+        var reader = DataService.Execute();
+        DataService.ClearQuery();
         reader.Close();
     }
 
     public void UpdateStudent(string studentId, string attribute, string value)
     {
-        _dataService.Query($"update student set {attribute}=@value where Id=@sid");
-        _dataService.Bind("@sid", studentId.ToString());
-        _dataService.Bind("@value", value);
-        var reader =_dataService.Execute();
-        _dataService.ClearQuery();
+        DataService.Query($"update student set {attribute}=@value where Id=@sid");
+        DataService.Bind("@sid", studentId.ToString());
+        DataService.Bind("@value", value);
+        var reader =DataService.Execute();
+        DataService.ClearQuery();
         reader.Close();
     }
 
@@ -62,4 +67,5 @@ public class StudentRepository : IStudentRepository
     {
         return filter.Filtering(GetStudents(), spec);
     }
+
 }

@@ -1,33 +1,31 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using BusinessLogic;
 using DataAccessLayer;
-using MySql.Data.MySqlClient;
-using Shared.Entities;
 using testLayer.Mock;
 using testLayer.Test;
 
-public class Program
+namespace testLayer;
+
+public static class Program
 {
     static void Main(string[] args)
     {
-        var repo = new StudentRepository()
-        {
-            _dataService = new DataBaseService("127.0.0.1", "root", "test", 3306, "root")
-        };
-        repo._dataService.RunTestScript("../../../MockData/data.sql");
-        MockStudentRegistrationManager studentRegistrationManagerTool = new MockStudentRegistrationManager(repo);
-        
-        StudentRegistrationTest.GetAllStudentsTest(studentRegistrationManagerTool);
-        StudentRegistrationTest.updateStudentTest(studentRegistrationManagerTool);
-        StudentRegistrationTest.deleteStudentTest(studentRegistrationManagerTool);
-         
-        
+        RunAllTest();
     }
 
-    
-    
-    
+    private static void RunAllTest()
+    {
+        DataBaseService dataSource = new DataBaseService("127.0.0.1", "root", "test", 3306, "root");
+        dataSource.RunTestScript("../../../MockData/data.sql");
+        
+        //initialize mock repositories
+        StudentRepository studentRepo = new StudentRepository(dataSource);
+        MockCourseRepository courseRepo = new MockCourseRepository(dataSource);
+        ProgramRepository programRepo = new ProgramRepository(dataSource, courseRepo);
+        
+        //initialize mock managers
+        MockCourseEnrollmentManager enrollRepo = new MockCourseEnrollmentManager(courseRepo, studentRepo, programRepo);
+        CourseEnrollmentManagerTest.getSuggestedCourseTest(enrollRepo);
+    }
+
 }
-
-

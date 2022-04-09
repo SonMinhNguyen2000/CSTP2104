@@ -6,8 +6,8 @@ namespace Shared.Entities;
 public class Student
 {
     private string _id;
-    public string Name;
-    public string? ProgramId;
+    public readonly string Name;
+    public readonly string ProgramId;
 
     public Student(string id, string n, string programId)
     {
@@ -23,6 +23,7 @@ public class Student
 
     public override string ToString()
     {
-        return $"student id: {_id}\nstudent name: {Name}\nProgram Id: {ProgramId}";
+        return $"student id: {_id}\nstudent name: {Name}\n";
     }
+    
 }
