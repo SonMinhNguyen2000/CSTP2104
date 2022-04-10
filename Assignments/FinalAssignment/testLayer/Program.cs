@@ -15,7 +15,14 @@ public static class TestLayer
 
     private static void RunAllTest()
     {
-        DataBaseService dataSource = new DataBaseService("127.0.0.1", "root", "test", 3306, "root");
+        //To test this project on your desktop, you need to:
+        DataBaseService dataSource = new DataBaseService(
+            "127.0.0.1", //alter this with your db server
+            "root", //alter this with your username
+            "000433430CSTP2104TestingProject", //alter this with your database name
+            3306, //alter this with you port number
+            "root" //alter this with your password
+            );
         dataSource.RunTestScript("../../../MockData/data.sql");
         
         //initialize mock repositories
