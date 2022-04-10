@@ -17,7 +17,7 @@ public static class CourseEnrollmentManagerTest
         var program2 = mockRepo.ProgramRepo.getProgram(student2.ProgramId);
         Console.WriteLine($"Program: {program2.Name}");
         Console.WriteLine("=======Courses student has passed========");
-        var passedCourses2 = mockRepo.GetPassedCourses(mockRepo.CourseRepo.GetStudentCourses("2"));
+        var passedCourses2 = mockRepo.GetPassedCourses(mockRepo.CourseRepo.GetStudentCoursesAndGrade("2"));
         foreach (var passedCourse in passedCourses2)
         {
             Console.WriteLine($"{passedCourse.ToString()}, ");
@@ -37,7 +37,7 @@ public static class CourseEnrollmentManagerTest
         var program = mockRepo.ProgramRepo.getProgram(student1.ProgramId);
         Console.WriteLine($"Program: {program.Name}");
         Console.WriteLine("=======Courses student has passed========");
-        var passedCourses = mockRepo.GetPassedCourses(mockRepo.CourseRepo.GetStudentCourses("1"));
+        var passedCourses = mockRepo.GetPassedCourses(mockRepo.CourseRepo.GetStudentCoursesAndGrade("1"));
         foreach (var passedCourse in passedCourses)
         {
             Console.WriteLine($"{passedCourse.ToString()}, ");

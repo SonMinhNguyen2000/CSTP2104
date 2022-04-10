@@ -2,6 +2,9 @@ using Shared.Interfaces;
 
 namespace DataAccessLayer;
 
+//prerequisite of courses will be represent in group
+//for example: CSTP1206 have 2 prerequisites: CSTP1105 and CSTP1106 or CSTP1108
+//then this means CSTP1206 has groupPrerequisite1(CSTP1105, CSTP1106) and groupPrerequisite2(CSTP1108) as prerquisite
 public class PrerequisiteRepository:IPrerequisite
 {
     public IDataService DataService { get; set; }

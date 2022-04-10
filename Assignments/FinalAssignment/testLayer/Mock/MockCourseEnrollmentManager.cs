@@ -34,7 +34,7 @@ public class MockCourseEnrollmentManager
             List<Course> suggestedCourses = new List<Course>();
         
             //courses student has taken 
-            List<(Course, double)> studentsCourses = CourseRepo.GetStudentCourses(studentId);
+            List<(Course, double)> studentsCourses = CourseRepo.GetStudentCoursesAndGrade(studentId);
             if (studentsCourses.Count == 0) //student hasn't taken any course (new student)
             {
                 suggestedCourses = getCoursesWithNoPrerequisite();//suggest course with no prerequisite

@@ -65,27 +65,29 @@ public class MockCourseRepository: ICourseRepository
 
     public List<List<Course>>? getPrerequisite(string id)
     {
-
+        //step 1: check if course have any prerequisite
         //prerequisite groups of the course - group represents "or" relationship
         //Ex: list[group1, group2, group3] -> this means group1 or group2 or group 3 can be prerequisite of 1 course
-        List<string> prerequisiteGroups = PreRepository.getPrerequisiteGroupId(id); 
-        
-        //prerequisite ids of each prerequisite group - inside of each group represent "and" relationship
-        //Ex: list[[id1, id2], [id3,id4], [id5,id6,id7]]
-        List<List<String>> prerequisiteIds = new List<List<string>>();
+        List<string> prerequisiteGroups = PreRepository.getPrerequisiteGroupId(id);
         if (prerequisiteGroups.Count == 0)
         {
             return null;
         }
-        foreach (var prerequisiteGroup in prerequisiteGroups)
+        
+        //step 2: get courseIds from prerequisite groups
+        //prerequisite ids of each prerequisite group - inside of each group represent "and" relationship
+        //Ex: list[[id1, id2], [id3,id4], [id5,id6,id7]]
+        List<List<String>> prerequisiteIds = new List<List<string>>();
+        foreach (var prerequisiteGroup in prerequisiteGroups) 
         {
            prerequisiteIds.Add(PreRepository.getPrerequisiteId(prerequisiteGroup));
         }
 
+        //step 3: get prerequisite courses base on the courseIds
         //prerequisite of the course
         //Ex: list[[course1, course2], [course3, course4], [course5, course6, course7]]
-        List<List<Course>> prerequisites = new List<List<Course>>();
-        foreach (var prerequisiteId in prerequisiteIds)
+        List<List<Course>> prerequisites = new List<List<Course>>(); 
+        foreach (var prerequisiteId in prerequisiteIds) //step 3: 
         {
             List<Course> prerequisite = new List<Course>();
             foreach (var preId in prerequisiteId)
@@ -98,12 +100,11 @@ public class MockCourseRepository: ICourseRepository
     }
     
     
-    public List<(Course, double)> GetStudentCourses(string studentID)
+    public List<(string, double)> GetStudentCoursesIdAndGrade(string studentId)
     {
-        List<(Course, double)> courses = new List<(Course, double)>();
         List<(string, double)> coursesIdsAndGrade = new List<(string, double)>();
         DataService.Query("select * from studentCourses where StudentId=@sid");
-        DataService.Bind("@sid", studentID);
+        DataService.Bind("@sid", studentId);
         var reader = DataService.Execute();
         while (reader.Read())
         {
@@ -113,14 +114,18 @@ public class MockCourseRepository: ICourseRepository
         }
         DataService.ClearQuery();
         reader.Close();
-        
-        foreach (var id in coursesIdsAndGrade)
+        return coursesIdsAndGrade;
+    }
+
+    public List<(Course, double)> GetStudentCoursesAndGrade(string studentId)
+    {
+        List<(Course, double)> coursesAndGrade = new List<(Course, double)>();
+        foreach (var id in GetStudentCoursesIdAndGrade(studentId))
         {
             Course course = GetCourse(id.Item1);
-            courses.Add((course, id.Item2));
+            coursesAndGrade.Add((course, id.Item2));
         }
-        
-        return courses;
+        return coursesAndGrade;
     }
 }
 
