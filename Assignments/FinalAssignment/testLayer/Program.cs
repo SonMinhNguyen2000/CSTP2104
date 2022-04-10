@@ -27,7 +27,8 @@ public static class TestLayer
         
         //initialize mock repositories
         MockStudentRepository studentRepo = new MockStudentRepository(dataSource);
-        MockCourseRepository courseRepo = new MockCourseRepository(dataSource);
+        MockPrerequisiteRepository prerequisiteRepository = new MockPrerequisiteRepository(dataSource);
+        MockCourseRepository courseRepo = new MockCourseRepository(dataSource, prerequisiteRepository);
         MockProgramRepository programRepo = new MockProgramRepository(dataSource, courseRepo);
         
         //initialize mock managers

@@ -5,11 +5,14 @@ namespace testLayer.Mock;
 
 public class MockCourseRepository: ICourseRepository
 {
-    public IDataService DataService { get; set; }
+    
+    public IDataService DataService { get; }
+    public IPrerequisite PreRepository { get; }
 
-    public MockCourseRepository(IDataService dataSource)
+    public MockCourseRepository(IDataService dataSource, IPrerequisite preRepo)
     {
         DataService = dataSource;
+        PreRepository = preRepo;
     }
     
     public List<Course> GetCourses()
@@ -62,11 +65,10 @@ public class MockCourseRepository: ICourseRepository
 
     public List<List<Course>>? getPrerequisite(string id)
     {
-        MockPrerequisiteRepository preRepository = new MockPrerequisiteRepository(DataService, id);
-        
+
         //prerequisite groups of the course - group represents "or" relationship
         //Ex: list[group1, group2, group3] -> this means group1 or group2 or group 3 can be prerequisite of 1 course
-        List<string> prerequisiteGroups = preRepository.getPrerequisiteGroupId(); 
+        List<string> prerequisiteGroups = PreRepository.getPrerequisiteGroupId(id); 
         
         //prerequisite ids of each prerequisite group - inside of each group represent "and" relationship
         //Ex: list[[id1, id2], [id3,id4], [id5,id6,id7]]
@@ -77,7 +79,7 @@ public class MockCourseRepository: ICourseRepository
         }
         foreach (var prerequisiteGroup in prerequisiteGroups)
         {
-           prerequisiteIds.Add(preRepository.getPrerequisiteId(prerequisiteGroup));
+           prerequisiteIds.Add(PreRepository.getPrerequisiteId(prerequisiteGroup));
         }
 
         //prerequisite of the course
@@ -122,47 +124,3 @@ public class MockCourseRepository: ICourseRepository
     }
 }
 
-
-class MockPrerequisiteRepository
-{
-    public IDataService DataService { get; set; }
-    private string CourseId { get; set; }
-
-    public MockPrerequisiteRepository(IDataService dataSource, string courseId)
-    {
-        DataService = dataSource;
-        CourseId = courseId;
-    }
-
-    //get group prerequisite ids of a specific course
-    public List<String> getPrerequisiteGroupId()
-    {
-        List<String> prerequisitesGroupId = new List<String>();
-        DataService.Query("Select PrerequisiteGroupId from prerequisite where CourseId = @id");
-        DataService.Bind("@id", CourseId);
-        var reader = DataService.Execute();
-        while (reader.Read())
-        {
-            prerequisitesGroupId.Add(reader["PrerequisiteGroupId"].ToString());
-        }
-        DataService.ClearQuery();
-        reader.Close();
-        return prerequisitesGroupId;
-    }
-    
-    //get all prerequisite ids of 1 prerequisite group
-    public List<String> getPrerequisiteId(string groupPrerequisiteId)
-    {
-        List<String> prerequisitesId = new List<string>();
-        DataService.Query("select CourseId from prerequisiteGroupCourse where GroupId = @gid");
-        DataService.Bind("@gid", groupPrerequisiteId);
-        var reader = DataService.Execute();
-        while (reader.Read())
-        {
-            prerequisitesId.Add(reader["CourseId"].ToString());
-        }
-        DataService.ClearQuery();
-        reader.Close();
-        return prerequisitesId;
-    }
-}
