@@ -23,7 +23,7 @@ public static class CourseEnrollmentManagerTest
             Console.WriteLine($"{passedCourse.ToString()}, ");
         }
         Console.WriteLine("=======Suggested course for next term=========");
-        List<Course> suggestedCourse2 =  mockRepo.GetSuggestCourse("1");
+        List<Course> suggestedCourse2 =  mockRepo.GetSuggestCourse("2");
         foreach (var course in suggestedCourse2)
         {
             Console.WriteLine(course.ToString());
