@@ -23,7 +23,7 @@ public static class TestLayer
             3306, //alter this with you port number
             "root" //alter this with your password
             );
-        dataSource.RunTestScript("../../../MockData/data.sql");
+        dataSource.RunTestScript("../../../MockData/data.sql");//add mock data to db
         
         //initialize mock repositories
         MockStudentRepository studentRepo = new MockStudentRepository(dataSource);
